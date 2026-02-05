@@ -7,7 +7,7 @@ app = FastAPI(title="Course Recommendation Service")
 @app.post("/recommend", response_model=RecommendResponse)
 def recommend_api(req: RecommendRequest):
     if not req.data:
-        return RecommendResponse(userId=-1, recommendations=[])
+        return RecommendResponse(userId=-1, items=[])
 
     recommendations = recommend(
         data=req.data,
@@ -17,5 +17,5 @@ def recommend_api(req: RecommendRequest):
 
     return RecommendResponse(
         userId=req.targetUserId,
-        recommendations=recommendations
+        items=recommendations
     )

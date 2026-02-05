@@ -17,4 +17,4 @@ class CourseRecommendation(BaseModel):
 
 class RecommendResponse(BaseModel):
     userId: int
-    recommendations: List[CourseRecommendation]
+    items: List[CourseRecommendation]

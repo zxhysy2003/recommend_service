@@ -41,6 +41,7 @@ env/
 .mypy_cache/
 .coverage
 htmlcov/
+myvenv/
 
 # Java / JVM / Gradle / Maven
 target/
